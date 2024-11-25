@@ -1,0 +1,38 @@
+/* Làm cho logo nhỏ hơn */
+.logo {
+    max-width: 150px;
+    height: auto;
+  }
+  
+  /* Tùy chỉnh cho form liên lạc */
+  .contact-form {
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-form h3 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Tùy chỉnh cho các input và textarea */
+  .contact-form .form-label {
+    font-weight: bold;
+  }
+  
+  .contact-form .form-control {
+    border-radius: 4px;
+  }
+  
+  .contact-form button {
+    font-size: 16px;
+  }
+  /* Tùy chỉnh tiêu đề h2 */
+.custom-heading {
+  font-weight: bold;  /* In đậm */
+  font-size: 1.5rem;    /* Tăng kích thước font */
+  color: #333;        /* Màu chữ */
+}
+  

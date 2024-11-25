@@ -1,0 +1,100 @@
+/* Đặt kiểu cho các thẻ nav-link */
+.nav-link {
+    background: none;
+    border: none;
+    color: #007bff;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    font-size: 16px;
+    text-align: center;
+    transition: color 0.3s, background-color 0.3s;
+  }
+  
+  .nav-link:hover {
+    color: #0056b3;
+    text-decoration: underline;
+  }
+  
+  .nav-link.active {
+    background-color: #007bff;
+    color: white;
+    border-radius: 8px;
+  }
+  
+  /* Đặt kiểu cho form */
+  form {
+    max-width: 400px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Đặt kiểu cho input */
+  .form-outline {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .form-outline input {
+    width: 100%;
+    padding: 10px;
+    padding-left: 40px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+  }
+  
+  .form-outline label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: #666;
+  }
+  
+  /* Đặt kiểu cho nút submit */
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Đặt kiểu cho các phần có thông báo hoặc liên kết */
+  .text-center p {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .text-center a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .text-center a:hover {
+    text-decoration: underline;
+  }
+  
+  .form-check-label {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .form-check-input {
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+  }
+  
