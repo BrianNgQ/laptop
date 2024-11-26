@@ -13,6 +13,10 @@ import Discount from "./pages/Discount";
 import LaptopRepair from "./pages/LaptopRepair"; 
 import Contact from "./components/Contact";
 import News from "./components/News";
+import ScreenReplacement from "./pages/ScreenReplacement";
+import BatteryReplacement from "./pages/BatteryReplacement";
+import KeyboardRepair from "./pages/KeyboardRepair";
+import SoftwareTroubleshooting from "./pages/SoftwareTroubleshooting";
 import "./styles/App.css";
 
 const App = () => {
@@ -46,7 +50,11 @@ const App = () => {
           <Route path="/discounts" element={<Discount />} /> {/* Thêm route Discount */}
           <Route path="/laptop-repair" element={<LaptopRepair />} /> {/* Thêm route LaptopRepair */}
           <Route path="/contact" element={<Contact />} />
-        <Route path="/news" element={<News />} />
+          <Route path="/news" element={<News />} />
+          <Route path="/screen-replacement" element={<ScreenReplacement />} />
+          <Route path="/battery-replacement" element={<BatteryReplacement />} />
+          <Route path="/keyboard-repair" element={<KeyboardRepair />} />
+          <Route path="/software-troubleshooting" element={<SoftwareTroubleshooting />} />
         </Routes>
       </main>
       <Footer />
