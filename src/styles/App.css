@@ -321,3 +321,8 @@ footer .row div {
 .btn-custom:hover {
   background-color: #0056b3; /* Màu nền khi hover */
 }
+.carousel-img {
+  object-fit: contain; /* Giữ nguyên tỷ lệ hình ảnh */
+  height: 400px; /* Chiều cao cụ thể để đồng nhất */
+}
+

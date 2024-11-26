@@ -1,13 +1,41 @@
-import React from "react";
-import { useNavigate } from "react-router-dom"; 
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import ProductList from "./ProductList"; 
+import ProductList from "./ProductList";
 
 const Home = () => {
   const navigate = useNavigate();
+  const [searchQuery, setSearchQuery] = useState(""); 
+
+  const handleSearch = () => {
+    alert(`Searching for: ${searchQuery}`);
+   
+  };
 
   return (
     <div className="container text-center my-5">
+      <div className="row justify-content-center mb-4">
+        <div className="col-md-8">
+          <div className="input-group">
+            <input
+              type="text"
+              className="form-control"
+              placeholder="Search for laptops, brands, or categories..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
+            <button
+              className="btn btn-primary"
+              type="button"
+              onClick={handleSearch}
+            >
+              Search
+            </button>
+          </div>
+        </div>
+      </div>
+
+ 
       <div className="row justify-content-center">
         <div className="col-md-12">
           <h1 className="display-4 font-weight-bold">Welcome to Laptop Store</h1>
@@ -48,7 +76,6 @@ const Home = () => {
             </button>
           </div>
 
-         
           <ProductList />
         </div>
       </div>
