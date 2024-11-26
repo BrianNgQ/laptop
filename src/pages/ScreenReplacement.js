@@ -4,7 +4,15 @@ import "./ScreenReplacement.css";
 
 const ScreenReplacement = () => (
   <div className="container my-5">
-    <h2 className="text-center mb-4">Screen Replacement</h2>
+    <h2
+      className="text-center mb-4"
+      style={{
+        fontWeight: "bold", 
+        fontSize: "2.0rem", 
+      }}
+    >
+      Screen Replacement
+    </h2>
     <div className="row align-items-center">
       {/* Hình ảnh bên trái */}
       <div className="col-md-6 text-center">

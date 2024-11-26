@@ -4,7 +4,15 @@ import "./BatteryReplacement.css";
 
 const BatteryReplacement = () => (
   <div className="container my-5">
-    <h2 className="text-center mb-4">Battery Replacement</h2>
+    <h2
+      className="text-center mb-4"
+      style={{
+        fontWeight: "bold", 
+        fontSize: "2.0rem", 
+      }}
+    >
+      Battery Replacement
+    </h2>
     <div className="row align-items-center">
   
       <div className="col-md-6 text-center">

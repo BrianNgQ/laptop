@@ -4,7 +4,15 @@ import "./SoftwareTroubleshooting.css";
 
 const SoftwareTroubleshooting = () => (
   <div className="container my-5">
-    <h2 className="text-center mb-4">Software Troubleshooting</h2>
+    <h2
+      className="text-center mb-4"
+      style={{
+        fontWeight: "bold", 
+        fontSize: "2.0rem", 
+      }}
+    >
+      Battery Replacement
+    </h2>
     <div className="row align-items-center">
       {/* Hình ảnh bên trái */}
       <div className="col-md-6 text-center">
