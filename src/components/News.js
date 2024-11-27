@@ -6,7 +6,7 @@ import "./News.css";
 const News = () => (
   <div className="container my-5 news-page">
     <div className="back-to-home">
-      <Link to="/" className="btn btn-primary">
+      <Link to="/" className="btn btn-primary center-text">
         Back
       </Link>
     </div>

@@ -18,6 +18,9 @@ import BatteryReplacement from "./pages/BatteryReplacement";
 import KeyboardRepair from "./pages/KeyboardRepair";
 import SoftwareTroubleshooting from "./pages/SoftwareTroubleshooting";
 import "./styles/App.css";
+import Saleoff from "./pages/Saleoff";
+import FreeShipping from "./pages/Freeshipping";
+import FreeMouse from "./pages/Freemouse";
 
 const App = () => {
   const [cartItems, setCartItems] = useState([]);
@@ -55,6 +58,11 @@ const App = () => {
           <Route path="/battery-replacement" element={<BatteryReplacement />} />
           <Route path="/keyboard-repair" element={<KeyboardRepair />} />
           <Route path="/software-troubleshooting" element={<SoftwareTroubleshooting />} />
+          <Route path="/sale-off" element={<Saleoff />} />
+          <Route path="/free-shipping" element={<FreeShipping />} />
+          <Route path="/free-mouse" element={<FreeMouse />} />
+
+
         </Routes>
       </main>
       <Footer />

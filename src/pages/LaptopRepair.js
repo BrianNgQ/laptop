@@ -7,7 +7,7 @@ const LaptopRepair = () => (
   <div className="container my-5 laptop-repair">
     {/* Nút "Back" ở bên trái */}
     <div className="back-to-home">
-      <Link to="/" className="btn btn-primary">
+      <Link to="/" className="btn btn-primary center-text">
         Back
       </Link>
     </div>
