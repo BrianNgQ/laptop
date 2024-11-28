@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ProductList from "./ProductList";
 
 const Home = () => {
+  const navigate = useNavigate(); 
   const [searchQuery, setSearchQuery] = useState("");
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -50,7 +52,49 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="row mt-5">
+      <div className="row justify-content-center mb-5">
+        <div className="col-md-12">
+          <h1 className="display-4 font-weight-bold">Welcome to Laptop Store</h1>
+          <p className="lead mt-3">
+            Discover the latest and greatest laptops that fit all your needs.
+            Quality, performance, and style—all in one place.
+          </p>
+          <div className="d-flex justify-content-center gap-3 mt-4">
+            <button
+              className="btn btn-outline-primary"
+              onClick={() => navigate("/products")}
+            >
+              View Products
+            </button>
+            <button
+              className="btn btn-outline-secondary"
+              onClick={() => navigate("/discounts")}
+            >
+              Discounts
+            </button>
+            <button
+              className="btn btn-outline-success"
+              onClick={() => navigate("/laptop-repair")}
+            >
+              Laptop Repair
+            </button>
+            <button
+              className="btn btn-outline-info"
+              onClick={() => navigate("/contact")}
+            >
+              Contact
+            </button>
+            <button
+              className="btn btn-outline-warning"
+              onClick={() => navigate("/news")}
+            >
+              News
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div className="row">
         <div className="col-md-8">
           <div className="image-wrapper">
             <img
