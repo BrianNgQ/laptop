@@ -13,6 +13,10 @@ import Discount from "./pages/Discount";
 import LaptopRepair from "./pages/LaptopRepair"; 
 import Contact from "./components/Contact";
 import News from "./components/News";
+import TopLaptopStudent from "./components/TopLaptopStudent";
+import WhatIsLaptopG from "./components/WhatIsLaptopG";
+import BackToSchool from "./components/BackToSchool";
+import BestLaptop from "./components/BestLaptop";
 import ScreenReplacement from "./pages/ScreenReplacement";
 import BatteryReplacement from "./pages/BatteryReplacement";
 import KeyboardRepair from "./pages/KeyboardRepair";
@@ -21,6 +25,8 @@ import "./styles/App.css";
 import Saleoff from "./pages/Saleoff";
 import FreeShipping from "./pages/Freeshipping";
 import FreeMouse from "./pages/Freemouse";
+
+
 
 const App = () => {
   const [cartItems, setCartItems] = useState([]);
@@ -54,6 +60,10 @@ const App = () => {
           <Route path="/laptop-repair" element={<LaptopRepair />} /> {/* Thêm route LaptopRepair */}
           <Route path="/contact" element={<Contact />} />
           <Route path="/news" element={<News />} />
+          <Route path="/top-laptops-student" element={<TopLaptopStudent />} />
+          <Route path="/what-is-gaming-laptop" element={<WhatIsLaptopG />} />
+          <Route path="/back-to-school" element={<BackToSchool />} />
+          <Route path="/best-laptop-brand" element={<BestLaptop />} />
           <Route path="/screen-replacement" element={<ScreenReplacement />} />
           <Route path="/battery-replacement" element={<BatteryReplacement />} />
           <Route path="/keyboard-repair" element={<KeyboardRepair />} />
@@ -61,7 +71,6 @@ const App = () => {
           <Route path="/sale-off" element={<Saleoff />} />
           <Route path="/free-shipping" element={<FreeShipping />} />
           <Route path="/free-mouse" element={<FreeMouse />} />
-
 
         </Routes>
       </main>

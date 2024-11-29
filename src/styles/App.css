@@ -325,4 +325,22 @@ footer .row div {
   object-fit: contain; /* Giữ nguyên tỷ lệ hình ảnh */
   height: 400px; /* Chiều cao cụ thể để đồng nhất */
 }
+.filter-card {
+  transition: all 0.3s ease-in-out;
+}
+
+.filter-card:hover {
+  transform: scale(1.05); /* Zoom in the hovered card */
+  z-index: 1; /* Make the hovered card stand out */
+}
+
+.filter-card-container:hover .filter-card:not(:hover) {
+  opacity: 0.5; /* Dim the other cards */
+}
+.gradient-background {
+  background: linear-gradient(to right, #cfd9df, #e2ebf0);
+  min-height: 100vh; /* Đảm bảo gradient bao phủ toàn bộ chiều cao */
+  display: flex;
+  flex-direction: column;
+}
 

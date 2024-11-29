@@ -1,0 +1,54 @@
+/* Phần bài viết */
+.blog-content {
+  text-align: justify;
+  font-family: "Arial", sans-serif;
+}
+
+.blog-title {
+  font-size: 2.5rem;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+.blog-paragraph {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.8;
+}
+
+/* Phần card sản phẩm */
+.product-cards h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  color: #007bff;
+}
+
+.card-text {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.text-primary {
+  font-size: 1rem;
+}
