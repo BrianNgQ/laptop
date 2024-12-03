@@ -2,12 +2,13 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ProductList from "./ProductList";
-import "../styles/App.css";
+import "../styles/App.css"; // Import file CSS đã chứa định nghĩa gradient
 
 const Home = () => {
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState("");
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [showPromotion, setShowPromotion] = useState(true); // Trạng thái cho popup promotion
 
   const images = [
     "/images/banner1.jpg",
@@ -30,9 +31,48 @@ const Home = () => {
     alert(`Searching for: ${searchQuery}`);
   };
 
+  // Đóng popup promotion
+  const closePromotion = () => {
+    setShowPromotion(false);
+  };
+
   return (
     <div className="gradient-background">
       <div className="container text-center my-5">
+
+        {/* Popup Promotion */}
+        {showPromotion && (
+          <div className="promotion-modal d-flex justify-content-center align-items-center">
+            <div className="promotion-content shadow-lg p-4 rounded position-relative">
+              <button
+                className="btn-close position-absolute top-0 end-0 m-2"
+                onClick={closePromotion}
+                aria-label="Close"
+              />
+              <img
+                src="/images/promotion.jpg"
+                alt="Special Promotion"
+                className="img-fluid rounded mb-3"
+              />
+              <h3 className="text-danger">🎉 Special Promotion!</h3>
+              <p className="lead text-secondary">
+                Save up to <strong className="text-warning">30%</strong> on our
+                latest laptops.
+              </p>
+              <button
+                className="btn btn-primary w-100"
+                onClick={() => {
+                  navigate("/discounts");
+                  closePromotion();
+                }}
+              >
+                View Discounts
+              </button>
+            </div>
+          </div>
+        )}
+
+        {/* Search Bar */}
         <div className="row justify-content-center mb-4">
           <div className="col-12 col-md-8">
             <div className="input-group">
@@ -53,6 +93,8 @@ const Home = () => {
             </div>
           </div>
         </div>
+
+        {/* Banner */}
         <div className="row justify-content-center mb-5">
           <div className="col-12">
             <h1 className="display-4 font-weight-bold">Welcome to Laptop Store</h1>
@@ -94,6 +136,8 @@ const Home = () => {
             </div>
           </div>
         </div>
+
+        {/* Slideshow and Sidebar */}
         <div className="row">
           <div className="col-12 col-md-8">
             <div className="image-wrapper">
@@ -132,6 +176,8 @@ const Home = () => {
             />
           </div>
         </div>
+
+        {/* Filter Cards */}
         <div className="row my-5 filter-card-container">
           <div className="col-12 col-md-4 mb-3">
             <div
@@ -188,6 +234,8 @@ const Home = () => {
             </div>
           </div>
         </div>
+
+        {/* Product List */}
         <div className="mt-5">
           <ProductList />
         </div>
