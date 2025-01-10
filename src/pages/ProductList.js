@@ -5,105 +5,105 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
-  const [brands, setBrands] = useState([]);
+  const [category, setCategory] = useState([]);
   const navigate = useNavigate();
 
   useEffect(() => {
     
-    const fetchedBrands = ["Dell", "HP", "Lenovo", "Apple"];
-    setBrands(fetchedBrands);
+    const fetchedcategory = ["Romance", "Thriller", "Sci-fi", "Cooking", "Health"];
+    setCategory(fetchedcategory);
 
   
     setProducts([
       {
         id: 1,
-        name: "Dell  Inspiron 15 5000",
-        brand: "Dell",
-        price: "$500",
-        image: "/images/laptop1.jpg",
+        name: "Pride and Prejudice",
+        category: "Romance",
+        price: "$12.99",
+        image: "/images/book1.jpg",
       },
       {
         id: 2,
-        name: "Dell Latitude 5410",
-        brand: "Dell",
-        price: "$500",
-        image: "/images/laptop2.jpg",
+        name: "The Silent Patient",
+        category: "Thriller",
+        price: "$14.99",
+        image: "/images/book2.jpg",
       },
       {
         id: 3,
-        name: "Dell Inspiron 3530",
-        brand: "Dell",
-        price: "$500",
-        image: "/images/laptop3.jpg",
+        name: "Dune",
+        category: "Sci-fi",
+        price: "$18.99",
+        image: "/images/book3.jpg",
       },
       {
         id: 4,
-        name: "HP Paviion 15",
-        brand: "HP",
-        price: "$600",
-        image: "/images/laptop4.jpg",
+        name: "Mastering the Art of French Cooking",
+        category: "Cooking",
+        price: "$20.99",
+        image: "/images/book4.jpg",
       },
       {
         id: 5,
-        name: "HP Pavilion Aero 13",
-        brand: "HP",
-        price: "$600",
-        image: "/images/laptop5.jpg",
+        name: "The Body Keeps the Score",
+        category: "Health",
+        price: "$16.99",
+        image: "/images/book5.jpg",
       },
       {
         id: 6,
-        name: "HP Gaming Victus 15",
-        brand: "HP",
-        price: "$600",
-        image: "/images/laptop6.jpg",
+        name: "The Life-Changing Magic of Tidying Up",
+        category: "Lifestyle",
+        price: "$15.99",
+        image: "/images/book6.jpg",
       },
       {
         id: 7,
-        name: "Lenovo LOQ 15IAX9",
-        brand: "Lenovo",
-        price: "$700",
-        image: "/images/laptop7.jpg",
+        name: "The Great Gatsby",
+        category: "Fiction",
+        price: "$13.99",
+        image: "/images/book7.jpg",
       },
       {
         id: 8,
-        name: "Lenovo Thinkbook 16 G6+",
-        brand: "Lenovo",
-        price: "$700",
-        image: "/images/laptop8.jpg",
+        name: "Gone Girl",
+        category: "Thriller",
+        price: "$17.99",
+        image: "/images/book8.jpg",
       },
       {
         id: 9,
-        name: "Lenovo Ideapad Slim 5",
-        brand: "Lenovo",
-        price: "$700",
-        image: "/images/laptop9.jpg",
+        name: "The Hobbit",
+        category: "Sci-fi",
+        price: "$14.99",
+        image: "/images/book9.jpg",
       },
       {
         id: 10,
-        name: "Macbook Air M2 2022",
-        brand: "Apple",
-        price: "$800",
-        image: "/images/laptop10.jpg",
+        name: "The 5 Second Rule",
+        category: "Health",
+        price: "$11.99",
+        image: "/images/book10.jpg",
       },
       {
         id: 11,
-        name: "Macbook Pro M1 Pro",
-        brand: "Apple",
-        price: "$800",
-        image: "/images/laptop11.jpg",
+        name: "The 4-Hour Workweek",
+        category: "Lifestyle",
+        price: "$19.99",
+        image: "/images/book11.jpg",
       },
       {
         id: 12,
-        name: "MacBook Air 13 inch",
-        brand: "Apple",
-        price: "$800",
-        image: "/images/laptop12.jpg",
+        name: "It Ends with Us",
+        category: "Romance",
+        price: "$14.99",
+        image: "/images/book12.jpg",
       },
     ]);
   }, []);
 
-  const handleBrandSelect = (brand) => {
-    navigate(`/products/${brand}`);
+  const handleCategorySelect = (category) => {
+    navigate(`/products/${category}`);
   };
 
   return (
@@ -112,12 +112,12 @@ const ProductList = () => {
       <div className="mb-4">
         <select
           className="form-select"
-          onChange={(e) => handleBrandSelect(e.target.value)}
+          onChange={(e) => handleCategorySelect(e.target.value)}
         >
-          <option value="">Select a Brand</option>
-          {brands.map((brand) => (
-            <option key={brand} value={brand}>
-              {brand}
+          <option value="">Select a category</option>
+          {category.map((category) => (
+            <option key={category} value={category}>
+              {category}
             </option>
           ))}
         </select>

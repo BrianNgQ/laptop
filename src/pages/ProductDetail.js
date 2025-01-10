@@ -8,270 +8,194 @@ import { useNavigate } from "react-router-dom"; // Thêm Bootstrap JavaScript
 const products = [
   {
     id: 1,
-    name: "Dell Inspiron 15 5000",
-    brand: "Dell",
-    price: "$500",
-    image: "/images/laptop1.jpg",
-    images: ["/images/laptop1.jpg", "/images/laptop1_2.jpg", "/images/laptop1_3.jpg"],
-details: `
-  <h2>Performance</h2>
-  <p>This laptop delivers exceptional performance with its powerful processor.</p>
-  <h3>Specifications</h3>
-  <ul>
-    <li>Display: 15.6 inches Full HD</li>
-    <li>Processor: Intel Core i5</li>
-    <li>Storage: 512GB SSD</li>
-  </ul>
-`,
-    },
+    title: "The Great Gatsby",
+    author: "F. Scott Fitzgerald",
+    price: "$10",
+    image: "/images/gatsby.jpg",
+    images: ["/images/gatsby.jpg", "/images/gatsby_2.jpg", "/images/gatsby_3.jpg"],
+    details: `
+      <h2>About the Book</h2>
+      <p>The Great Gatsby is a novel about the American Dream in the Roaring Twenties.</p>
+      <h3>Plot Summary</h3>
+      <p>Nick Carraway narrates the story of Jay Gatsby's tragic pursuit of Daisy Buchanan.</p>
+      <h3>Author Bio</h3>
+      <p>F. Scott Fitzgerald was a renowned American writer during the Jazz Age.</p>
+    `,
+  },
   {
     id: 2,
-    name: "Dell Latitude 5410",
-    brand: "Dell",
-    price: "$500",
-    image: "/images/laptop2.jpg",
-    images: [
-      "/images/laptop2.jpg",
-      "/images/laptop2_2.jpg",
-      "/images/laptop2_3.jpg",
-    ],
+    title: "1984",
+    author: "George Orwell",
+    price: "$15",
+    image: "/images/1984.jpg",
+    images: ["/images/1984.jpg", "/images/1984_2.jpg", "/images/1984_3.jpg"],
     details: `
-      <h2>Business-Class Laptop</h2>
-      <p>Perfect for professionals with a lightweight design and solid performance.</p>
-      <h3>Key Highlights</h3>
-      <ul>
-        <li>14-inch Full HD Display</li>
-        <li>Intel Core i5 Processor</li>
-        <li>Long Battery Life</li>
-      </ul>
+      <h2>About the Book</h2>
+      <p>1984 is a dystopian novel that explores the dangers of totalitarianism.</p>
+      <h3>Plot Summary</h3>
+      <p>Winston Smith, living in a society controlled by "Big Brother," seeks to rebel.</p>
+      <h3>Author Bio</h3>
+      <p>George Orwell is a British writer famous for his political allegories.</p>
     `,
   },
   {
     id: 3,
-    name: "Dell Inspiron 3530",
-    brand: "Dell",
-    price: "$500",
-    image: "/images/laptop3.jpg",
-
-    images: [
-      "/images/laptop3.jpg",
-      "/images/laptop3_2.jpg",
-      "/images/laptop3_3.jpg",
-    ],
+    title: "To Kill a Mockingbird",
+    author: "Harper Lee",
+    price: "$12",
+    image: "/images/mockingbird.jpg",
+    images: ["/images/mockingbird.jpg", "/images/mockingbird_2.jpg", "/images/mockingbird_3.jpg"],
     details: `
-      <h2>Compact Design</h2>
-      <p>The Dell Inspiron 3530 is designed for portability without sacrificing performance.</p>
-      <h3>Features</h3>
-      <ul>
-        <li>13-inch HD Display</li>
-        <li>Intel Core i3 Processor</li>
-        <li>500GB HDD Storage</li>
-      </ul>
+      <h2>About the Book</h2>
+      <p>To Kill a Mockingbird addresses issues of racism and injustice in the South.</p>
+      <h3>Plot Summary</h3>
+      <p>The story of Scout Finch, her father Atticus, and their fight against racial inequality.</p>
+      <h3>Author Bio</h3>
+      <p>Harper Lee is an American novelist known for her seminal work on racial issues.</p>
     `,
   },
   {
     id: 4,
-    name: "HP Pavilion 15",
-    brand: "HP",
-    price: "$600",
-    image: "/images/laptop4.jpg",
-   
-    images: [
-      "/images/laptop4.jpg",
-      "/images/laptop4_2.jpg",
-      "/images/laptop4_3.jpg",
-    ],
+    title: "Pride and Prejudice",
+    author: "Jane Austen",
+    price: "$18",
+    image: "/images/pride.jpg",
+    images: ["/images/pride.jpg", "/images/pride_2.jpg", "/images/pride_3.jpg"],
     details: `
-      <h2>Elegant Design</h2>
-      <p>Combines sleek aesthetics with powerful performance.</p>
-      <h3>Specifications</h3>
-      <ul>
-        <li>15-inch Full HD Display</li>
-        <li>Intel Core i7 Processor</li>
-        <li>16GB RAM, 1TB SSD</li>
-      </ul>
+      <h2>About the Book</h2>
+      <p>Pride and Prejudice is a romantic novel that critiques the English class system.</p>
+      <h3>Plot Summary</h3>
+      <p>The love story between Elizabeth Bennet and Mr. Darcy and their journey to overcome prejudices.</p>
+      <h3>Author Bio</h3>
+      <p>Jane Austen was an English author whose works have been widely adapted into film and theatre.</p>
     `,
   },
   {
     id: 5,
-    name: "HP Pavilion Aero 13",
-    brand: "HP",
-    price: "$600",
-    image: "/images/laptop5.jpg",
-    
-    images: [
-      "/images/laptop5.jpg",
-      "/images/laptop5_2.jpg",
-      "/images/laptop5_3.jpg",
-    ],
+    title: "Moby-Dick",
+    author: "Herman Melville",
+    price: "$22",
+    image: "/images/mobydick.jpg",
+    images: ["/images/mobydick.jpg", "/images/mobydick_2.jpg", "/images/mobydick_3.jpg"],
     details: `
-      <h2>Portability</h2>
-      <p>Designed for students and professionals who need performance on the go.</p>
-      <h3>Specifications</h3>
-      <ul>
-        <li>13-inch Full HD Display</li>
-        <li>AMD Ryzen 5 Processor</li>
-        <li>8GB RAM, 512GB SSD</li>
-      </ul>
+      <h2>About the Book</h2>
+      <p>Moby-Dick is a novel about obsession and revenge, centered around Captain Ahab's pursuit of a whale.</p>
+      <h3>Plot Summary</h3>
+      <p>The narrative follows Ishmael, a sailor, aboard the Pequod under Ahab's command to hunt Moby Dick.</p>
+      <h3>Author Bio</h3>
+      <p>Herman Melville was an American author, known for this complex and philosophical novel.</p>
     `,
   },
   {
     id: 6,
-    name: "HP Gaming Victus 15",
-    brand: "HP",
-    price: "$600",
-    image: "/images/laptop6.jpg",
-    
-    images: [
-      "/images/laptop6.jpg",
-      "/images/laptop6_2.jpg",
-      "/images/laptop6_3.jpg",
-    ],
+    title: "War and Peace",
+    author: "Leo Tolstoy",
+    price: "$25",
+    image: "/images/warpeace.jpg",
+    images: ["/images/warpeace.jpg", "/images/warpeace_2.jpg", "/images/warpeace_3.jpg"],
     details: `
-      <h2>Ultimate Gaming Experience</h2>
-      <p>Built for gamers with top-notch hardware and advanced cooling technology.</p>
-      <h3>Specifications</h3>
-      <ul>
-        <li>15.6-inch Full HD Display</li>
-        <li>NVIDIA GeForce GTX 1650</li>
-        <li>Intel Core i7, 16GB RAM</li>
-      </ul>
+      <h2>About the Book</h2>
+      <p>War and Peace is an epic novel that spans the Napoleonic wars and Russian society.</p>
+      <h3>Plot Summary</h3>
+      <p>Following various characters, the story portrays the effects of Napoleon's invasion of Russia.</p>
+      <h3>Author Bio</h3>
+      <p>Leo Tolstoy was a Russian author, recognized as one of the greatest novelists of all time.</p>
     `,
   },
   {
     id: 7,
-    name: "Lenovo LOQ 15IAX9",
-    brand: "Lenovo",
-    price: "$700",
-    image: "/images/laptop7.jpg",
-   
-    images: [
-      "/images/laptop7.jpg",
-      "/images/laptop7_2.jpg",
-      "/images/laptop7_3.jpg",
-    ],
+    title: "The Catcher in the Rye",
+    author: "J.D. Salinger",
+    price: "$14",
+    image: "/images/catcher.jpg",
+    images: ["/images/catcher.jpg", "/images/catcher_2.jpg", "/images/catcher_3.jpg"],
     details: `
-    <h2>High Performance</h2>
-    <p>Offers an unmatched experience for gamers and power users alike.</p>
-    <h3>Specifications</h3>
-    <ul>
-      <li>15.6-inch Display</li>
-      <li>Intel Core i7 Processor</li>
-      <li>1TB SSD</li>
-    </ul>
-  `,
+      <h2>About the Book</h2>
+      <p>The Catcher in the Rye explores themes of adolescent rebellion, alienation, and identity.</p>
+      <h3>Plot Summary</h3>
+      <p>The story follows Holden Caulfield, a teenager grappling with grief and confusion about adulthood.</p>
+      <h3>Author Bio</h3>
+      <p>J.D. Salinger is best known for this classic work on the complexities of teenage life.</p>
+    `,
   },
   {
     id: 8,
-    name: "Lenovo Thinkbook 16 G6+",
-    brand: "Lenovo",
-    price: "$700",
-    image: "/images/laptop8.jpg",
-    
-    images: [
-      "/images/laptop8.jpg",
-      "/images/laptop8_2.jpg",
-      "/images/laptop8_3.jpg",
-    ],
+    title: "The Odyssey",
+    author: "Homer",
+    price: "$13",
+    image: "/images/odyssey.jpg",
+    images: ["/images/odyssey.jpg", "/images/odyssey_2.jpg", "/images/odyssey_3.jpg"],
     details: `
-      <h2>Professional Performance</h2>
-      <p>Designed for professionals who need power and reliability for everyday tasks and heavy applications.</p>
-      <h3>Features</h3>
-      <ul>
-        <li>16-inch Full HD Display</li>
-        <li>Intel Core i7 Processor</li>
-        <li>16GB RAM, 512GB SSD</li>
-      </ul>
+      <h2>About the Book</h2>
+      <p>The Odyssey is an ancient Greek epic, focusing on the hero Odysseus’s journey back home.</p>
+      <h3>Plot Summary</h3>
+      <p>Odysseus faces a variety of challenges on his long journey to return to Ithaca.</p>
+      <h3>Author Bio</h3>
+      <p>Homer is regarded as the father of Greek literature, famous for his epic poems.</p>
     `,
   },
   {
     id: 9,
-    name: "Lenovo Ideapad Slim 5",
-    brand: "Lenovo",
-    price: "$700",
-    image: "/images/laptop9.jpg",
-    images: [
-      "/images/laptop9.jpg",
-      "/images/laptop9_2.jpg",
-      "/images/laptop9_3.jpg",
-    ],
+    title: "Catch-22",
+    author: "Joseph Heller",
+    price: "$20",
+    image: "/images/catch22.jpg",
+    images: ["/images/catch22.jpg", "/images/catch22_2.jpg", "/images/catch22_3.jpg"],
     details: `
-      <h2>Slim and Stylish</h2>
-      <p>With a sleek design, the Ideapad Slim 5 is perfect for users who need portability with solid performance.</p>
-      <h3>Specifications</h3>
-      <ul>
-        <li>14-inch Full HD Display</li>
-        <li>AMD Ryzen 5 Processor</li>
-        <li>8GB RAM, 512GB SSD</li>
-      </ul>
+      <h2>About the Book</h2>
+      <p>Catch-22 explores the absurdity of war and the effects of bureaucracy on individuals.</p>
+      <h3>Plot Summary</h3>
+      <p>The novel follows Yossarian, a US Air Force bomber who becomes caught in the military's absurd regulations.</p>
+      <h3>Author Bio</h3>
+      <p>Joseph Heller is a renowned American author famous for his satirical take on war and politics.</p>
     `,
   },
   {
     id: 10,
-    name: "Macbook Air M2 2022",
-    brand: "Apple",
-    price: "$800",
-    image: "/images/laptop10.jpg",
-    images: [
-      "/images/laptop10.jpg",
-      "/images/laptop10_2.jpg",
-      "/images/laptop10_3.jpg",
-    ],
+    title: "Frankenstein",
+    author: "Mary Shelley",
+    price: "$17",
+    image: "/images/frankenstein.jpg",
+    images: ["/images/frankenstein.jpg", "/images/frankenstein_2.jpg", "/images/frankenstein_3.jpg"],
     details: `
-      <h2>Power and Portability</h2>
-      <p>The Macbook Air M2 offers exceptional performance while remaining ultra-portable and sleek.</p>
-      <h3>Features</h3>
-      <ul>
-        <li>13.3-inch Retina Display</li>
-        <li>Apple M2 Chip</li>
-        <li>8GB RAM, 256GB SSD</li>
-      </ul>
+      <h2>About the Book</h2>
+      <p>Frankenstein is the story of Victor Frankenstein and his creation of a monstrous creature.</p>
+      <h3>Plot Summary</h3>
+      <p>Victor’s creation is abandoned, and he must face the consequences of his reckless scientific ambition.</p>
+      <h3>Author Bio</h3>
+      <p>Mary Shelley is regarded as the mother of the science fiction genre, known for this gothic novel.</p>
     `,
   },
   {
     id: 11,
-    name: "Macbook Pro M1 Pro",
-    brand: "Apple",
-    price: "$800",
-    image: "/images/laptop11.jpg",
-    description:
-      "High-performance MacBook with M1 Pro chip, 16GB RAM, and 512GB SSD.",
-    images: [
-      "/images/laptop11.jpg",
-      "/images/laptop11_2.jpg",
-      "/images/laptop11_3.jpg",
-    ],
+    title: "Crime and Punishment",
+    author: "Fyodor Dostoevsky",
+    price: "$19",
+    image: "/images/crimepunishment.jpg",
+    images: ["/images/crimepunishment.jpg", "/images/crimepunishment_2.jpg", "/images/crimepunishment_3.jpg"],
     details: `
-      <h2>For Creative Professionals</h2>
-      <p>The Macbook Pro M1 Pro is built for professionals in creative fields with power for demanding applications.</p>
-      <h3>Specifications</h3>
-      <ul>
-        <li>14-inch Retina Display</li>
-        <li>Apple M1 Pro Chip</li>
-        <li>16GB RAM, 512GB SSD</li>
-      </ul>
+      <h2>About the Book</h2>
+      <p>Crime and Punishment is a psychological exploration of crime, guilt, and redemption.</p>
+      <h3>Plot Summary</h3>
+      <p>The novel follows Rodion Raskolnikov, who commits murder and faces intense moral conflict.</p>
+      <h3>Author Bio</h3>
+      <p>Fyodor Dostoevsky is known for his deep psychological insights and philosophical themes in literature.</p>
     `,
   },
   {
     id: 12,
-    name: "MacBook Air 13 inch",
-    brand: "Apple",
-    price: "$800",
-    image: "/images/laptop12.jpg",
-    images: [
-      "/images/laptop12.jpg",
-      "/images/laptop12_2.jpg",
-      "/images/laptop12_3.jpg",
-    ],
+    title: "Dracula",
+    author: "Bram Stoker",
+    price: "$21",
+    image: "/images/dracula.jpg",
+    images: ["/images/dracula.jpg", "/images/dracula_2.jpg", "/images/dracula_3.jpg"],
     details: `
-      <h2>Ultimate Portability</h2>
-      <p>The MacBook Air 13-inch offers great performance in a thin and portable form factor, making it ideal for travel.</p>
-      <h3>Key Features</h3>
-      <ul>
-        <li>13.3-inch Retina Display</li>
-        <li>Apple M1 Chip</li>
-        <li>8GB RAM, 256GB SSD</li>
-      </ul>
+      <h2>About the Book</h2>
+      <p>Dracula is the quintessential gothic novel about the legendary vampire and his pursuit of victims.</p>
+      <h3>Plot Summary</h3>
+      <p>The novel follows Jonathan Harker’s journey to Transylvania and his encounter with Count Dracula.</p>
+      <h3>Author Bio</h3>
+      <p>Bram Stoker is the Irish author credited with creating the most famous vampire novel of all time.</p>
     `,
   },
 ];

@@ -1,76 +1,104 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const ProductCard = ({ product }) => {
-  const navigate = useNavigate();
-
-  const handleAddToCart = () => {
-    navigate("/cart");
-  };
-
   return (
-    <div className="col-md-3 mb-4"> 
-      <div className="card h-100 shadow-sm">
-        <img
-          src={product.image}
-          className="card-img-top"
-          alt={product.name}
+    <div className="col-md-3 mb-4 product-card">
+      <div
+        className="shadow-sm position-relative h-100 card-container"
+        style={{
+          backgroundColor: "transparent",
+          border: "none",
+        }}
+      >
+        {/* Vùng chứa ảnh và icon */}
+        <div
+          className="position-relative"
           style={{
-            height: "200px", 
-            objectFit: "contain", 
+            backgroundColor: "#EFEEE8",
+            padding: "31.5px",
+            borderRadius: "8px",
+            overflow: "hidden",
           }}
-        />
-        <div className="card-body d-flex flex-column">
-          <h5 className="card-title text-center">{product.name}</h5>
-          <p className="card-text text-success font-weight-bold text-center">
-            {product.price}
-          </p>
-          <div className="mt-auto d-flex align-items-center justify-content-center">
-            
-            <Link
-              to={`/product/${product.id}`}
-              title="View this product" 
-              className="d-flex align-items-center justify-content-center"
-              style={{
-                width: "40px",
-                height: "40px",
-                fontSize: "18px",
-                color: "black",
-                textDecoration: "none", 
-              }}
-            >
-              <i className="fa-solid fa-eye"></i>
-            </Link>
+        >
+          {/* Hình ảnh sản phẩm */}
+          <img
+            src={product.image}
+            alt={product.name}
+            style={{
+              height: "200px",
+              objectFit: "contain",
+              maxWidth: "100%",
+              display: "block",
+            }}
+          />
 
-          
-            <div
-              style={{
-                width: "1px",
-                height: "25px", 
-                backgroundColor: "#ddd",
-                margin: "0 8px",
-              }}
-            ></div>
-
-           
+          {/* Lớp overlay cho icon */}
+          <div className="icon-overlay d-flex justify-content-center align-items-center gap-3">
+            {/* Icon heart */}
             <button
-              onClick={handleAddToCart}
-              title="Add to cart" 
-              className="d-flex align-items-center justify-content-center"
+              title="Add to wishlist"
+              className="d-flex justify-content-center align-items-center"
               style={{
                 width: "40px",
                 height: "40px",
                 fontSize: "18px",
                 border: "none",
-                background: "none", 
-                color: "black", 
-                cursor: "pointer", 
+                background: "rgba(255, 255, 255, 0.8)",
+                borderRadius: "50%",
+                color: "black",
+                cursor: "pointer",
               }}
             >
-              <i className="fa-solid fa-cart-shopping"></i>
+              <i className="fa-solid fa-heart"></i>
+            </button>
+
+            {/* Icon eye */}
+            <button
+              title="View this product"
+              className="d-flex justify-content-center align-items-center"
+              style={{
+                width: "40px",
+                height: "40px",
+                fontSize: "18px",
+                border: "none",
+                background: "rgba(255, 255, 255, 0.8)",
+                borderRadius: "50%",
+                color: "black",
+                cursor: "pointer",
+              }}
+            >
+              <i className="fa-solid fa-eye"></i>
             </button>
           </div>
+        </div>
+
+        {/* Thông tin sản phẩm */}
+        <div
+          className="text-center mt-3"
+          style={{
+            padding: "10px 5px",
+          }}
+        >
+          <h5
+            style={{
+              fontSize: "16px",
+              fontWeight: "bold",
+              color: "#333",
+              marginBottom: "8px",
+            }}
+          >
+            {product.name}
+          </h5>
+          <p
+            className="text-success"
+            style={{
+              fontSize: "14px",
+              fontWeight: "500",
+            }}
+          >
+            {product.price}
+          </p>
         </div>
       </div>
     </div>

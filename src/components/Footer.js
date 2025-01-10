@@ -1,44 +1,89 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const Footer = () => (
-  <footer className="bg-dark text-white py-5">
+  <footer 
+    className="bg-secondary text-white py-5" 
+   
+  >
     <div className="container">
       <div className="row">
-        <div className="col-md-3">
-          <div className="d-flex align-items-center">
-            
-            <span className="font-weight-bold">Laptop Store</span>
+        {/* About Section */}
+        <div className="col-lg-4 mb-4">
+          <h5 className="text-uppercase text-warning mb-3">About Book Haven</h5>
+          <p>
+            Book Haven is your gateway to an endless library of stories, knowledge, and imagination.
+            Discover books across all genres and find your next favorite read today.
+          </p>
+          <div className="social-icons d-flex">
+            <a href="#" className="text-warning me-3">
+              <i className="fab fa-facebook fa-lg"></i>
+            </a>
+            <a href="#" className="text-warning me-3">
+              <i className="fab fa-twitter fa-lg"></i>
+            </a>
+            <a href="#" className="text-warning">
+              <i className="fab fa-instagram fa-lg"></i>
+            </a>
           </div>
-          <p className="mt-3">Laptop Cần Thơ - Bảo hành 12 tháng</p>
         </div>
-        <div className="col-md-3">
-          <h5>Khách hàng</h5>
+
+        {/* Explore Section */}
+        <div className="col-lg-4 mb-4">
+          <h5 className="text-uppercase text-warning mb-3">Explore</h5>
           <ul className="list-unstyled">
-            <li>Gio hàng</li>
-            <li>Sản phẩm yêu thích</li>
-            <li>Theo dõi đơn hàng</li>
+            <li className="mb-2">
+              <a href="#" className="text-white text-decoration-none">
+                Browse by Genre
+              </a>
+            </li>
+            <li className="mb-2">
+              <a href="#" className="text-white text-decoration-none">
+                Recommended Reads
+              </a>
+            </li>
+            <li className="mb-2">
+              <a href="#" className="text-white text-decoration-none">
+                New Arrivals
+              </a>
+            </li>
+            <li className="mb-2">
+              <a href="#" className="text-white text-decoration-none">
+                Popular Authors
+              </a>
+            </li>
           </ul>
         </div>
-        <div className="col-md-3">
-          <h5>Thông kê</h5>
-          <div>Lượng truy cập hôm nay: 5,683</div>
-          <div>Tổng lượng truy cập: 1,531,090</div>
-          <div>Đang truy cập: 20</div>
-        </div>
-        <div className="col-md-3">
-          <h5>Hướng dẫn</h5>
+
+        {/* Support Section */}
+        <div className="col-lg-4 mb-4">
+          <h5 className="text-uppercase text-warning mb-3">Support</h5>
           <ul className="list-unstyled">
-            <li>Hướng dẫn đặt hàng</li>
-            <li>Chính sách kiểm hàng</li>
-            <li>Chính sách bảo mật</li>
-            <li>Chính sách vận chuyển và giao hàng</li>
+            <li className="mb-2">
+              <a href="#" className="text-white text-decoration-none">
+                FAQ
+              </a>
+            </li>
+            <li className="mb-2">
+              <a href="#" className="text-white text-decoration-none">
+                Contact Us
+              </a>
+            </li>
+            <li className="mb-2">
+              <a href="#" className="text-white text-decoration-none">
+                Privacy Policy
+              </a>
+            </li>
+            <li className="mb-2">
+              <a href="#" className="text-white text-decoration-none">
+                Terms & Conditions
+              </a>
+            </li>
           </ul>
         </div>
       </div>
       <div className="text-center mt-4">
-        <p>&copy; 2023 Laptop Cần Thơ . All rights reserved.</p>
+        <p>&copy; 2025 Book Haven. All Rights Reserved.</p>
       </div>
     </div>
   </footer>

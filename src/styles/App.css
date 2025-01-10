@@ -1,42 +1,11 @@
 /* App.css */
 body {
-  font-family: Arial, sans-serif;
+  background-color: #fffdf5;
+  margin: 0;
+  font-family: Arial, sans-serif; /* Hoặc phông chữ bạn muốn sử dụng */
+  color: #333; /* Màu chữ mặc định (nếu cần) */
 }
 
-header {
-  background-color: #333;
-  color: white;
-  padding: 10px;
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-}
-
-nav ul li {
-  display: inline;
-  margin-right: 20px;
-}
-
-.product-card {
-  border: 1px solid #ccc;
-  padding: 20px;
-  text-align: center;
-  margin: 10px;
-  width: 200px;
-}
-
-.product-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-.product-detail {
-  text-align: center;
-  margin: 20px;
-}
 /* Đặt khoảng cách giữa các phần tử trong form */
 form {
   max-width: 500px; /* Giới hạn chiều rộng của form */
@@ -176,28 +145,27 @@ a:hover {
   background-color: #007bff; /* Màu nền khi tab active */
 }
 /* Hiệu ứng hover cho card sản phẩm */
-.card:hover {
-  transform: translateY(-5px); /* Di chuyển sản phẩm lên một chút */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Thêm bóng cho sản phẩm */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hiệu ứng chuyển động mượt mà */
+.position-relative:hover .opacity-0 {
+  opacity: 1 !important;  /* Khi hover vào card, các icon sẽ hiện ra */
 }
+
+.opacity-0 {
+  opacity: 0;  /* Ẩn icon mặc định */
+}
+
+.hover-opacity-100:hover {
+  opacity: 1 !important;  /* Khi hover vào, icon sẽ hiện lên */
+}
+
 
 /* Hiệu ứng hover cho hình ảnh sản phẩm */
-.card:hover .card-img-top {
-  opacity: 0.8; /* Làm mờ hình ảnh khi hover */
-  transition: opacity 0.3s ease; /* Hiệu ứng mượt mà khi làm mờ hình ảnh */
-}
+
 
 /* Hiệu ứng hover cho tên và giá sản phẩm */
-.card:hover .card-body {
-  background-color: #f8f9fa; /* Thay đổi màu nền của phần thông tin sản phẩm */
-}
+
 
 /* Đổi màu nền button khi hover */
-.card:hover .btn {
-  background-color: #007bff; /* Đổi màu nền của button khi hover */
-  border-color: #007bff; /* Đổi màu đường viền của button */
-}
+
 img {
   width: 100%; /* Đảm bảo ảnh chiếm toàn bộ chiều rộng của khung chứa */
   height: 400px; /* Đặt chiều cao cố định để đảm bảo tính đồng nhất */
@@ -239,21 +207,7 @@ img {
 }
 /*----------------------------------------------------------------*/
 /* Footer Styles */
-footer {
-  background-color: #343a40; /* Nền tối */
-  color: #f8f9fa; /* Màu chữ sáng */
-  padding: 2rem 0; /* Khoảng cách trên/dưới */
-}
 
-footer .container {
-  max-width: 1200px; /* Giới hạn chiều rộng của footer */
-}
-
-footer h5 {
-  font-size: 1.25rem;
-  margin-bottom: 1rem;
-  color: #ffc107; /* Màu vàng nổi bật cho tiêu đề */
-}
 
 footer p {
   font-size: 0.9rem;
@@ -286,11 +240,7 @@ footer img {
   margin-right: 10px;
 }
 
-footer .text-center p {
-  font-size: 0.85rem;
-  color: #a0a0a0; /* Màu xám nhạt cho bản quyền */
-  margin-top: 1.5rem;
-}
+
 
 footer .row div {
   margin-bottom: 1.5rem;
@@ -337,12 +287,7 @@ footer .row div {
 .filter-card-container:hover .filter-card:not(:hover) {
   opacity: 0.5; /* Dim the other cards */
 }
-.gradient-background {
-  background: linear-gradient(to right, #cfd9df, #e2ebf0);
-  min-height: 100vh; /* Đảm bảo gradient bao phủ toàn bộ chiều cao */
-  display: flex;
-  flex-direction: column;
-}
+
 
 .promotion-modal {
   display: none;
@@ -412,4 +357,57 @@ footer .row div {
   border-radius: 5px;
   margin-bottom: 15px;
 }
+/* App.css */
+header nav {
+  position: fixed; /* Giữ navbar ở vị trí cố định */
+  top: 0; /* Dính lên đầu trang */
+  left: 0; /* Đặt navbar từ mép trái của trang */
+  right: 0; /* Đặt navbar từ mép phải của trang */
+  background-color: #fff8e7; /* Màu nền của navbar */
+  z-index: 1030; /* Đảm bảo navbar ở trên các phần tử khác */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Thêm bóng mờ nếu cần */
+}
+
+body {
+  padding-top: 60px; /* Tạo khoảng cách dưới header cho phần nội dung không bị che khuất */
+}
+/* Khi hover vào vùng sản phẩm */
+/* Hiệu ứng hover cho card */
+.product-card:hover .card-container {
+  transform: scale(1.05);
+  z-index: 10;
+  transition: transform 0.3s ease, z-index 0.3s ease;
+}
+
+/* Mờ các card khác */
+.product-card {
+  transition: opacity 0.3s ease;
+}
+
+.product-card:hover ~ .product-card {
+  opacity: 0.5;
+}
+
+/* Hiển thị icon khi hover vào card */
+.card-container {
+  position: relative;
+}
+
+.icon-overlay {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0; /* Ẩn mặc định */
+  pointer-events: none; /* Vô hiệu hóa click mặc định */
+  transition: opacity 0.3s ease;
+}
+
+/* Hiển thị icon khi hover vào card */
+.product-card:hover .icon-overlay {
+  opacity: 1; /* Hiển thị icon */
+  pointer-events: auto; /* Kích hoạt khả năng click */
+}
+
+
 
